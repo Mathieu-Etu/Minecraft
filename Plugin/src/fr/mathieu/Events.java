@@ -1,4 +1,4 @@
-package fr.djesus.fight;
+package fr.mathieu;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
