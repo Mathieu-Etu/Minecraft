@@ -1,20 +1,29 @@
 package fr.mathieu;
 
+import java.util.UUID;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
+import org.bukkit.attribute.Attribute;
+import org.bukkit.attribute.AttributeModifier;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 
 import net.md_5.bungee.api.ChatColor;
+import net.minecraft.server.v1_16_R3.Slot;
 
 
 
 public class CommandKit implements CommandExecutor{
 
+	@SuppressWarnings("deprecation")
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args)
 	{
 		if(sender instanceof Player)
@@ -39,17 +48,28 @@ public class CommandKit implements CommandExecutor{
 				ItemStack jambes = new ItemStack(Material.IRON_LEGGINGS, 1);
 				ItemStack pieds = new ItemStack(Material.IRON_BOOTS, 1);
 				
+				ItemMeta customEpee = epee.getItemMeta();
+				customEpee.addEnchant(Enchantment.DURABILITY,100, true);
+				/*customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, new AttributeModifier(Attribute.GENERIC_ATTACK_SPEED, 0, AttributeModifier.Operation.ADD_NUMBER));*/
+				customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED,new AttributeModifier(new UUID(1,10000), "generic.attack_speed",100,AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
+				customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,new AttributeModifier(new UUID(1,1000), "generic.attack_damage",3,AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
+				epee.setItemMeta(customEpee);
+				
+				p.setMaxHealth(30);
+				p.setHealth(30);
+				
 				
 				p.getInventory().setItem(0, epee);
-				p.getInventory().setItem(2, pelle);
-				p.getInventory().setItem(3, pommes);
-				p.getInventory().setItem(4, blocs);
+				p.getInventory().setItemInOffHand(shield);
+				p.getInventory().setItem(1, pelle);
+				p.getInventory().setItem(2, pommes);
+				p.getInventory().setItem(3, blocs);
 				
-				p.getInventory().setItem(1, shield);
-				p.getInventory().setItem(5, casque);
-				p.getInventory().setItem(6, plastron);
-				p.getInventory().setItem(7, jambes);
-				p.getInventory().setItem(8, pieds);
+				
+				p.getInventory().setItem(4, casque);
+				p.getInventory().setItem(5, plastron);
+				p.getInventory().setItem(6, jambes);
+				p.getInventory().setItem(7, pieds);
 				
 				p.sendMessage("§1Voici ton incroyable §4kit §1de Guerrier !");
 				Bukkit.broadcastMessage("§4"+p.getName() + " §1a demandé un §4kit §1de Guerrier");

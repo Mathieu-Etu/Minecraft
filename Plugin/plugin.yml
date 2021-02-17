@@ -5,5 +5,5 @@ main: fr.mathieu.Main
 api-version: 1.16
 commands:
   kit:
-    description: Choisi entre Guerrier, Archer, Eclaireur ou Berserker
+    description: Choisis entre Guerrier, Archer, Eclaireur ou Berserker
     permission: kit.use
