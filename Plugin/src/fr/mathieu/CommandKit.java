@@ -50,11 +50,32 @@ public class CommandKit implements CommandExecutor{
 				
 				ItemMeta customEpee = epee.getItemMeta();
 				customEpee.addEnchant(Enchantment.DURABILITY,100, true);
-				/*customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED, new AttributeModifier(Attribute.GENERIC_ATTACK_SPEED, 0, AttributeModifier.Operation.ADD_NUMBER));*/
 				customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_SPEED,new AttributeModifier(new UUID(1,10000), "generic.attack_speed",100,AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
 				customEpee.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,new AttributeModifier(new UUID(1,1000), "generic.attack_damage",3,AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
 				epee.setItemMeta(customEpee);
 				
+				ItemMeta cS = shield.getItemMeta();
+				cS.addEnchant(Enchantment.DURABILITY, 100, true);
+				shield.setItemMeta(cS);
+				
+				ItemMeta cC = casque.getItemMeta();
+				cC.addEnchant(Enchantment.DURABILITY, 100, true);
+				cC.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				casque.setItemMeta(cC);
+				ItemMeta cP = plastron.getItemMeta();
+				cP.addEnchant(Enchantment.DURABILITY, 100, true);
+				cP.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				plastron.setItemMeta(cP);
+				ItemMeta cJ = jambes.getItemMeta();
+				cJ.addEnchant(Enchantment.DURABILITY, 100, true);
+				cJ.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				jambes.setItemMeta(cJ);
+				ItemMeta cPi = pieds.getItemMeta();
+				cPi.addEnchant(Enchantment.DURABILITY, 100, true);
+				cPi.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				pieds.setItemMeta(cPi);
+				
+	
 				p.setMaxHealth(30);
 				p.setHealth(30);
 				
@@ -79,13 +100,40 @@ public class CommandKit implements CommandExecutor{
 				inventory.clear();	
 				
 				ItemStack arc = new ItemStack(Material.BOW, 1);
-				ItemStack fleches = new ItemStack(Material.ARROW, 128);			
+				ItemStack fleches = new ItemStack(Material.ARROW, 64);			
 				ItemStack epee = new ItemStack(Material.WOODEN_SWORD, 1);
 				
 				ItemStack casque = new ItemStack(Material.LEATHER_HELMET, 1);
 				ItemStack plastron = new ItemStack(Material.LEATHER_CHESTPLATE, 1);
 				ItemStack jambes = new ItemStack(Material.LEATHER_LEGGINGS, 1);
 				ItemStack pieds = new ItemStack(Material.LEATHER_BOOTS, 1);
+				
+				ItemMeta cA = arc.getItemMeta();
+				cA.addEnchant(Enchantment.DURABILITY, 100, true);
+				cA.addEnchant(Enchantment.ARROW_INFINITE, 1, true);
+				cA.addAttributeModifier(Attribute.GENERIC_ATTACK_DAMAGE,new AttributeModifier(new UUID(1,1000), "generic.attack_damage",-3,AttributeModifier.Operation.ADD_NUMBER,EquipmentSlot.HAND));
+				arc.setItemMeta(cA);
+				ItemMeta cE = epee.getItemMeta();
+				cE.addEnchant(Enchantment.DURABILITY, 100, true);
+				cE.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				epee.setItemMeta(cE);
+				
+				ItemMeta cC = casque.getItemMeta();
+				cC.addEnchant(Enchantment.DURABILITY, 100, true);
+				cC.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				casque.setItemMeta(cC);
+				ItemMeta cP = plastron.getItemMeta();
+				cP.addEnchant(Enchantment.DURABILITY, 100, true);
+				cP.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				plastron.setItemMeta(cP);
+				ItemMeta cJ = jambes.getItemMeta();
+				cJ.addEnchant(Enchantment.DURABILITY, 100, true);
+				cJ.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				jambes.setItemMeta(cJ);
+				ItemMeta cPi = pieds.getItemMeta();
+				cPi.addEnchant(Enchantment.DURABILITY, 100, true);
+				cPi.addEnchant(Enchantment.PROTECTION_PROJECTILE, 2, true);
+				pieds.setItemMeta(cPi);
 				
 				p.getInventory().setItem(0, epee);
 				p.getInventory().setItem(2, pelle);

@@ -32,19 +32,7 @@ public class CommandTP implements CommandExecutor {
 			this.seth = new Location(p.getWorld(),px,py,pz);
 			p.sendMessage("Vous avez enregistré votre sethome");
 		}
-		if(sender instanceof Player && label.equals("home"))
-		{
-			Player p = (Player) sender;
-			if(this.seth!=null)
-			{
-				p.teleport(seth);
-			}
-			else
-			{
-				p.sendMessage("Pas de sethome enregistré");
-			}
-			
-		}
+		
 		return false;
 	}
 

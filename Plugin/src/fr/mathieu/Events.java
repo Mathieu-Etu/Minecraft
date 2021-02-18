@@ -15,10 +15,7 @@ public class Events implements Listener {
 	{
 		Player player = event.getPlayer();
 		player.getInventory().clear();
-		event.setJoinMessage(ChatColor.DARK_GREEN+player.getName()+"§a a rejoint le serveur");	
-		
-		player.getInventory().addItem(new ItemStack(Material.IRON_SWORD,1));
-		
+		event.setJoinMessage(ChatColor.DARK_GREEN+player.getName()+"§a a rejoint le serveur");		
 	}
 	
 }

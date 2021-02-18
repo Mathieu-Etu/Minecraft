@@ -10,8 +10,6 @@ public class Main extends JavaPlugin{
 		Bukkit.getConsoleSender().sendMessage("Merci d'avoir install� mon plugin.");
 		getCommand("kit").setExecutor(new CommandKit());
 		getCommand("spawn").setExecutor(new CommandTP());
-		getCommand("sethome").setExecutor(new CommandTP());
-		getCommand("home").setExecutor(new CommandTP());
 		getServer().getPluginManager().registerEvents(new Events(), this);
 	}
 	
