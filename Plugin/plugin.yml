@@ -7,3 +7,12 @@ commands:
   kit:
     description: Choisis entre Guerrier, Archer, Eclaireur ou Berserker
     permission: kit.use
+  spawn:
+    description: Teleporte au spawn
+    permission: spawn.use
+  sethome:
+    description: enregistre votre position pour vous y teleporter, place aussi votre spawnpoint
+    permission: sethome.use
+  home:
+    description: teleporte a votre sethome
+    permission: home.use

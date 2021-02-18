@@ -71,8 +71,8 @@ public class CommandKit implements CommandExecutor{
 				p.getInventory().setItem(6, jambes);
 				p.getInventory().setItem(7, pieds);
 				
-				p.sendMessage("§1Voici ton incroyable §4kit §1de Guerrier !");
-				Bukkit.broadcastMessage("§4"+p.getName() + " §1a demandé un §4kit §1de Guerrier");
+				p.sendMessage("Â§1Voici ton incroyable Â§4kit Â§1de Guerrier !");
+				Bukkit.broadcastMessage("Â§4"+p.getName() + " Â§1a demandÃ© un Â§4kit Â§1de Guerrier");
 			}
 			else if(args[0].equals("Archer"))
 			{
@@ -99,8 +99,8 @@ public class CommandKit implements CommandExecutor{
 				p.getInventory().setItem(8, pieds);
 				p.getInventory().addItem(fleches);
 				
-				p.sendMessage("§1Voici ton incroyable §4kit §1d'Archer !");
-				Bukkit.broadcastMessage("§4"+p.getName() + " §1a demandé un §4kit §1d'Archer");
+				p.sendMessage("Â§1Voici ton incroyable Â§4kit Â§1d'Archer !");
+				Bukkit.broadcastMessage("Â§4"+p.getName() + " Â§1a demandÃ© un Â§4kit Â§1d'Archer");
 			}
 			else if(args[0].equals("Eclaireur"))
 			{
@@ -127,8 +127,8 @@ public class CommandKit implements CommandExecutor{
 				p.getInventory().setItem(8, pieds);
 				p.getInventory().addItem(fleches);
 				
-				p.sendMessage("§1Voici ton incroyable §4kit §1d'Eclaireur !");
-				Bukkit.broadcastMessage("§4"+p.getName() + " §1a demandé un §4kit §1d'Eclaireur");
+				p.sendMessage("Â§1Voici ton incroyable Â§4kit Â§1d'Eclaireur !");
+				Bukkit.broadcastMessage("Â§4"+p.getName() + " Â§1a demandÃ© un Â§4kit Â§1d'Eclaireur");
 			}
 			else if(args[0].equals("Berserker"))
 			{
@@ -152,12 +152,12 @@ public class CommandKit implements CommandExecutor{
 				p.getInventory().setItem(6, jambes);
 				p.getInventory().setItem(7, pieds);
 				
-				p.sendMessage("§1Voici ton incroyable §4kit §1de Berserker !");
-				Bukkit.broadcastMessage("§4"+p.getName() + " §1a demandé un §4kit §1de Berserker");
+				p.sendMessage("Â§1Voici ton incroyable Â§4kit Â§1de Berserker !");
+				Bukkit.broadcastMessage("Â§4"+p.getName() + " Â§1a demandÃ© un Â§4kit Â§1de Berserker");
 			}
 			else
 			{
-				p.sendMessage("§4Tu dois renseigner le nom de ton kit pour en obtenir un");
+				p.sendMessage("Â§4Tu dois renseigner le nom de ton kit pour en obtenir un");
 			}
 
 		}

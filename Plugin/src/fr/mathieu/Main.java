@@ -7,8 +7,11 @@ public class Main extends JavaPlugin{
 
 	public void onEnable() 
 	{
-		Bukkit.getConsoleSender().sendMessage("Merci d'avoir installé mon plugin.");
+		Bukkit.getConsoleSender().sendMessage("Merci d'avoir installï¿½ mon plugin.");
 		getCommand("kit").setExecutor(new CommandKit());
+		getCommand("spawn").setExecutor(new CommandTP());
+		getCommand("sethome").setExecutor(new CommandTP());
+		getCommand("home").setExecutor(new CommandTP());
 		getServer().getPluginManager().registerEvents(new Events(), this);
 	}
 	
