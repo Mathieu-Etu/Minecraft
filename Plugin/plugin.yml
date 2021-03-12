@@ -5,8 +5,14 @@ main: fr.mathieu.Main
 api-version: 1.16
 commands:
   kit:
-    description: Choisis entre Guerrier, Archer, Eclaireur ou Berserker
+    description: Choisis entre Guerrier, Archer, Eclaireur, Berserker ou Guerisseur
     permission: kit.use
   spawn:
     description: Teleporte au spawn
     permission: spawn.use
+  setspawn:
+    description: Place le spawn
+    permission: setspawn.use
+  drapeau:
+    description: Donne le drapeau a recuperer
+    permission: drapeau.use
