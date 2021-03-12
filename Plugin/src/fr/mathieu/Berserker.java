@@ -61,6 +61,6 @@ public class Berserker {
 		ListeJoueur.listeK.set(pos, 4);
 		
 		p.sendMessage("§1Voici ton incroyable §4kit §1de Berserker !");
-		Bukkit.broadcastMessage("§4"+p.getName() + " §1a reçu un §4kit §1de Berserker");
+		Bukkit.broadcastMessage("§6"+p.getName() + " §1a reçu un §4kit §1de Berserker");
 	}
 }

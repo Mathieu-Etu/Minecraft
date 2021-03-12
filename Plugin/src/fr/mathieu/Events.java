@@ -23,16 +23,17 @@ public class Events implements Listener{
 	{
 		Player player = event.getPlayer();
 		player.getInventory().clear();
-		event.setJoinMessage(ChatColor.DARK_GREEN+player.getName()+"§a a rejoint le serveur");
+		event.setJoinMessage(ChatColor.GOLD+player.getName()+"§a a rejoint le serveur");
 		ListeJoueur.listeJ.add(player.getName());
-		ListeJoueur.listeK.add(0);
+		ListeJoueur.listeK.add(1);
+		new Guerrier(player);
 	}
 	
 	public void onQuit(PlayerQuitEvent event)
 	{
 		Player player = event.getPlayer();
 		player.getInventory().clear();
-		event.setQuitMessage(ChatColor.DARK_GREEN+player.getName()+"§a a quitté le serveur");
+		event.setQuitMessage(ChatColor.GOLD+player.getName()+"§a a quitté le serveur");
 		int pos = ListeJoueur.listeJ.indexOf(player.getName());
 		ListeJoueur.listeK.remove(pos);
 		ListeJoueur.listeJ.remove(player.getName());
@@ -48,9 +49,16 @@ public class Events implements Listener{
 		
 		if(p.getInventory().contains(Material.RED_BANNER))
 		{
-			Bukkit.getServer().broadcastMessage("§aLa Bannière est tombée ! §4"+p.getName()+"§a ne l'a plus !");
-			Bukkit.getServer().broadcastMessage("§4"+killer.getName()+"§a détient la bannière !");
+			Bukkit.getServer().broadcastMessage("§aLa Bannière §4Rouge §aest tombée ! §6"+p.getName()+"§a ne l'a plus !");
+			Bukkit.getServer().broadcastMessage("§6"+killer.getName()+"§a détient la bannière !");
 			ItemStack banner = new ItemStack(Material.RED_BANNER,1);
+			killer.getInventory().addItem(banner);
+		}
+		if(p.getInventory().contains(Material.BLUE_BANNER))
+		{
+			Bukkit.getServer().broadcastMessage("§aLa Bannière §1BLEUE §aest tombée ! §6"+p.getName()+"§a ne l'a plus !");
+			Bukkit.getServer().broadcastMessage("§6"+killer.getName()+"§a détient la bannière !");
+			ItemStack banner = new ItemStack(Material.BLUE_BANNER,1);
 			killer.getInventory().addItem(banner);
 		}
 		List<ItemStack> liste = e.getDrops();
@@ -58,12 +66,12 @@ public class Events implements Listener{
 		if(p instanceof Player && killer!= null && killer instanceof Player)
 		{
 			String nomK = killer.getName();
-			e.setDeathMessage("§4"+nom+"§a a été tué par §4"+nomK);
+			e.setDeathMessage("§6"+nom+"§a a été tué par §6"+nomK);
 			
 		}
 		else
 		{
-			e.setDeathMessage("§4"+nom+"§a est Mort");
+			e.setDeathMessage("§6"+nom+"§a est Mort");
 		}			
 	}
 	

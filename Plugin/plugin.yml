@@ -14,5 +14,5 @@ commands:
     description: Place le spawn
     permission: setspawn.use
   drapeau:
-    description: Donne le drapeau a recuperer
+    description: Donne le drapeau a recuperer (bleu ou rouge)
     permission: drapeau.use

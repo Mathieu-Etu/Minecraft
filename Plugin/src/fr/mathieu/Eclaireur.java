@@ -82,6 +82,6 @@ public class Eclaireur {
 		ListeJoueur.listeK.set(pos, 3);
 		
 		p.sendMessage("§1Voici ton incroyable §4kit §1d'Eclaireur !");
-		Bukkit.broadcastMessage("§4"+p.getName() + " §1a reçu un §4kit §1d'Eclaireur");
+		Bukkit.broadcastMessage("§6"+p.getName() + " §1a reçu un §4kit §1d'Eclaireur");
 	}
 }

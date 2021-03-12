@@ -86,7 +86,7 @@ public class Guerrier{
 		ListeJoueur.listeK.set(pos, 1);
 		
 		p.sendMessage("§1Voici ton incroyable §4kit §1de Guerrier !");
-		Bukkit.broadcastMessage("§4"+p.getName() + " §1a reçu un §4kit §1de Guerrier");
+		Bukkit.broadcastMessage("§6"+p.getName() + " §1a reçu un §4kit §1de Guerrier");
 	}
 
 

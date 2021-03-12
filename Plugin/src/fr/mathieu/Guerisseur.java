@@ -109,6 +109,6 @@ public class Guerisseur {
 		ListeJoueur.listeK.set(pos, 5);
 		
 		p.sendMessage("§1Voici ton incroyable §4kit §1de Guerisseur !");
-		Bukkit.broadcastMessage("§4"+p.getName() + " §1a reçu un §4kit §1de Guerisseur");
+		Bukkit.broadcastMessage("§6"+p.getName() + " §1a reçu un §4kit §1de Guerisseur");
 	}
 }

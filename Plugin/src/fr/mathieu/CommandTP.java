@@ -3,6 +3,7 @@ package fr.mathieu;
 
 
 
+
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -12,10 +13,13 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 
+
+
 public class CommandTP implements CommandExecutor {
 
 	private Location setsp=null;
 	
+
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] arg3) {
 		
@@ -47,11 +51,26 @@ public class CommandTP implements CommandExecutor {
 		}
 		if(sender instanceof Player && label.equals("drapeau"))
 		{
-			Player p = (Player) sender;
-			ItemStack banner = new ItemStack(Material.RED_BANNER,1);			
-			p.getInventory().addItem(banner);
+			if(arg3[0].equals("rouge"))
+			{
+				Player p = (Player) sender;
+				ItemStack banner = new ItemStack(Material.RED_BANNER,1);			
+				p.getInventory().addItem(banner);
+			}
+			else if(arg3[0].equals("bleu"))
+			{
+				Player p = (Player) sender;
+				ItemStack banner = new ItemStack(Material.BLUE_BANNER,1);			
+				p.getInventory().addItem(banner);
+			}
+			else
+			{
+				Player p = (Player) sender;
+				p.sendMessage("Vous devez renseigner une couleur !");
+			}
 			
 		}
+		
 		
 		return false;
 	}
