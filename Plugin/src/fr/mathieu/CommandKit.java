@@ -23,30 +23,53 @@ public class CommandKit implements CommandExecutor{
 			
 			if(args[1].equals("Guerrier"))
 			{
-				new Guerrier(p);
+				Equipe.testLoc(p,"Guerrier");	
 			}
 			else if(args[1].equals("Archer"))
 			{
-				new Archer(p);
+				Equipe.testLoc(p,"Archer");	
 			}
 			else if(args[1].equals("Eclaireur"))
 			{
-				new Eclaireur(p);
+				Equipe.testLoc(p,"Eclaireur");
 			}
 			else if(args[1].equals("Berserker"))
 			{
-				new Berserker(p);
+				Equipe.testLoc(p,"Berserker");	
 			}
 			else if(args[1].equals("Guerisseur"))
 			{
-				new Guerisseur(p);
+				Equipe.testLoc(p,"Guerisseur");	
 			}
 			else
 			{
 				p.sendMessage("§4Tu dois renseigner le nom de ton kit pour en obtenir un kit");
 			}
-
 		}
 		return true;
+	}
+	
+	public static void kit(Player p,String kit)
+	{
+		if(kit.equals("Guerrier"))
+		{
+			new Guerrier(p);	
+		}
+		else if(kit.equals("Archer"))
+		{
+			new Archer(p);			
+		}
+		else if(kit.equals("Eclaireur"))
+		{
+			new Eclaireur(p);			
+		}
+		else if(kit.equals("Berserker"))
+		{
+			new Berserker(p);	
+		}
+		else if(kit.equals("Guerisseur"))
+		{
+			new Guerisseur(p);			
+		}
 	}
 }

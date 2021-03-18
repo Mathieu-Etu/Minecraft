@@ -107,6 +107,12 @@
     },
     "done": true
   },
+  "minecraft:recipes/building_blocks/crimson_hyphae": {
+    "criteria": {
+      "has_log": "2021-03-15 17:33:06 +0100"
+    },
+    "done": true
+  },
   "minecraft:recipes/building_blocks/yellow_concrete_powder": {
     "criteria": {
       "has_sand": "2021-02-17 00:40:06 +0100"
@@ -303,6 +309,12 @@
   "minecraft:recipes/tools/wooden_hoe": {
     "criteria": {
       "has_stick": "2021-02-17 11:49:51 +0100"
+    },
+    "done": true
+  },
+  "minecraft:recipes/building_blocks/crimson_planks": {
+    "criteria": {
+      "has_logs": "2021-03-15 17:33:06 +0100"
     },
     "done": true
   },

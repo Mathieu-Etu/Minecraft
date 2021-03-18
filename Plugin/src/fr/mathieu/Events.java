@@ -4,15 +4,25 @@ import java.util.List;
 
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
+import org.bukkit.block.CommandBlock;
+import org.bukkit.command.BlockCommandSender;
+import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
+import org.bukkit.event.server.ServerCommandEvent;
 import org.bukkit.inventory.ItemStack;
+
+import net.minecraft.server.v1_16_R3.BlockCommand;
+
 
 
 
@@ -74,6 +84,8 @@ public class Events implements Listener{
 			e.setDeathMessage("§6"+nom+"§a est Mort");
 		}			
 	}
+	
+	
 	
 	@EventHandler
 	public void onPlayerRespawn(PlayerRespawnEvent e)

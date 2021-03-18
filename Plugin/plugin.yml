@@ -16,3 +16,6 @@ commands:
   drapeau:
     description: Donne le drapeau a recuperer (bleu ou rouge)
     permission: drapeau.use
+  equipe:
+    description: Permet de rejoindre une equipe (bleue ou rouge)
+    permission: equipe.use

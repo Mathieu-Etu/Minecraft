@@ -63,6 +63,11 @@ public class CommandTP implements CommandExecutor {
 				ItemStack banner = new ItemStack(Material.BLUE_BANNER,1);			
 				p.getInventory().addItem(banner);
 			}
+			else if(arg3[0].equals("rendre"))
+			{
+				Player p = (Player) sender;
+				
+			}
 			else
 			{
 				Player p = (Player) sender;
